@@ -68,13 +68,8 @@ public class Personaggio {
         }
         return ris;
     }
-    public boolean subisciDanno(int danno){
+    public void subisciDanno(int danno){
         hp -= danno;
-        boolean ris = false;
-        if(isVivo()){
-            ris = true;
-        }
-        return ris;
     }
     public void movimento(int x, int y){
         
