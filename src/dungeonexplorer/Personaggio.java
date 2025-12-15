@@ -1,79 +1,69 @@
 package dungeonexplorer;
-public class Personaggio {
+public abstract class Personaggio {
     private String nome;
-    private int hp;
+    private int[]pos;
     private int atk;
     private int def;
+    private int hp;
+    private int maxHp;
     private double range;
-    private int[] pos;
 
-    public Personaggio(String nome, int hp, int atk, int def, double range, int[] pos) {
-        this.nome = nome;
-        this.hp = hp;
-        this.atk = atk;
-        this.def = def;
-        this.range = range;
-        this.pos = pos;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public int getHp() {
-        return hp;
-    }
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-    public int getAtk() {
-        return atk;
-    }
-    public void setAtk(int atk) {
-        this.atk = atk;
-    }
     public int getDef() {
         return def;
     }
-    public void setDef(int def) {
-        this.def = def;
+
+    public int getHp() {
+        return hp;
     }
-    public double getRange() {
-        return range;
+
+    public int getAtk() {
+        return atk;
     }
-    public void setRange(double range) {
-        this.range = range;
-    }
-    public int[] getPos() {
-        return pos;
-    }
-    public void setPos(int[] pos) {
-        this.pos = pos;
-    }
-    @Override
-    public String toString() {
-        return "Personaggio{" + "nome=" + nome + ", hp=" + hp + ", atk=" + atk + ", def=" + def + ", range=" + range + ", pos=" + pos + '}';
-    }
-    public int attacco(Personaggio nemico){
-        return 0;
-    }
-    public int attacco(Personaggio nemico, Arma arma){
-        return 0;
-    }
-    private boolean isVivo(){
-        boolean ris = false;
-        if(hp > 0){
-            ris = true;
-        }
-        return ris;
-    }
-    public void subisciDanno(int danno){
-        hp -= danno;
-    }
-    public void movimento(int x, int y){
-        
+
+    public void setHp(int hp) {
+        this.hp = hp;
     }
     
-   
+    public Personaggio(String nome, int[] pos, int atk, int def, int hp, int maxHp, double range) {
+        this.nome = nome;
+        this.pos = pos;
+        this.atk = atk;
+        this.def = def;
+        this.hp = hp;
+        this.maxHp = maxHp;
+        this.range = range;
+    }
+    public int attacco(Personaggio nemico){
+        int danno=atk*3-nemico.getDef()*2;
+        if(danno<=0){
+            danno=1;
+        }
+        return danno;
+    }
+    public void movimento(int x, int y){
+        pos[0]+=x;
+        pos[1]+=y;
+    }
+    public boolean isVivo(){
+        boolean vivo=false;
+        if(hp>0){
+            vivo=true;
+        }
+        return vivo;
+    }
+    public boolean subisciDanno(int danno){
+        hp-=danno;
+        return isVivo();
+    }
+
+    public int getMaxHp() {
+        return maxHp;
+    }
+
+    @Override
+    public String toString() {
+        return "Personaggio{" + "nome=" + nome + ", pos=" + pos[0] +";"+pos[1]+ ", atk=" + atk + ", def=" + def + ", hp=" + hp + ", maxHp=" + maxHp + ", range=" + range + '}';
+    }
+    
+    
 }
