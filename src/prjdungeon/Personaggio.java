@@ -32,6 +32,35 @@ public abstract class Personaggio {
     public void setHp(int hp) {
         this.hp = hp;
     }
+
+    public void setPos(int[] pos) {
+        this.pos = pos;
+    }
+
+    public void setAtk(int atk) {
+        this.atk = atk;
+    }
+
+    public void setDef(int def) {
+        this.def = def;
+    }
+
+    public void setMaxHp(int maxHp) {
+        this.maxHp = maxHp;
+    }
+
+    public int[] getPos() {
+        return pos;
+    }
+
+    public int getMaxHp() {
+        return maxHp;
+    }
+
+    public double getRange() {
+        return range;
+    }
+    
     
     public Personaggio(String nome, int[] pos, int atk, int def, int hp, int maxHp, double range) {
         this.nome = nome;
