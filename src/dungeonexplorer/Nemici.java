@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Nemici extends Personaggio{
     boolean isBoss;
     public Nemici(String nome, int[] pos, int atk, int def, int hp, int maxHp, double range, boolean isBoss) {

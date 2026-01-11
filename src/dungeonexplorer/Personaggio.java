@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public abstract class Personaggio {
     private String nome;
     private int[]pos;

@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Scheletro extends Nemici {
     private int nRigenerazioni;
     public Scheletro(String nome, int[] pos, int atk, int def, int hp, int maxHp, double range,boolean isBoss) {

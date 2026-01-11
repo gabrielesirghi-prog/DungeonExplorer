@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Ladro extends Personaggio{
     //chance critica inizierà a 20% ma potrà essere aumentata con oggetti
     private int critChance;

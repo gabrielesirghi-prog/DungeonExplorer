@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Paladino extends Personaggio {
     int enDivina;
     int enDivinaMax;

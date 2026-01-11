@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Goblin extends Nemici{
     private int agilita;
     public Goblin(String nome, int[] pos, int atk, int def, int hp, int maxHp, double range, boolean isBoss,int agilita) {

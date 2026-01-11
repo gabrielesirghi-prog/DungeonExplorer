@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 import java.util.*;
 public class PrjDungeon {
 

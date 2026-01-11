@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Mago  extends Personaggio{
     private int mana;
     private int totMana;

@@ -1,4 +1,4 @@
-package prjdungeon;
+package dungeonexplorer;
 public class Necromante extends Nemici{
     int nMorti;
     NonMorti[] NonMorti;
