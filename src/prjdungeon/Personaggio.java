@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package prjdungeon;
-
-/**
- *
- * @author manuel.stenico
- */
 public abstract class Personaggio {
     private String nome;
     private int[]pos;
@@ -17,51 +8,6 @@ public abstract class Personaggio {
     private int maxHp;
     private double range;
 
-    public int getDef() {
-        return def;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public int getAtk() {
-        return atk;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-
-    public void setPos(int[] pos) {
-        this.pos = pos;
-    }
-
-    public void setAtk(int atk) {
-        this.atk = atk;
-    }
-
-    public void setDef(int def) {
-        this.def = def;
-    }
-
-    public void setMaxHp(int maxHp) {
-        this.maxHp = maxHp;
-    }
-
-    public int[] getPos() {
-        return pos;
-    }
-
-    public int getMaxHp() {
-        return maxHp;
-    }
-
-    public double getRange() {
-        return range;
-    }
-    
-    
     public Personaggio(String nome, int[] pos, int atk, int def, int hp, int maxHp, double range) {
         this.nome = nome;
         this.pos = pos;
@@ -70,6 +16,39 @@ public abstract class Personaggio {
         this.hp = hp;
         this.maxHp = maxHp;
         this.range = range;
+    }
+    public int getDef() {
+        return def;
+    }
+    public int getHp() {
+        return hp;
+    }
+    public int getAtk() {
+        return atk;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+    public void setPos(int[] pos) {
+        this.pos = pos;
+    }
+    public void setAtk(int atk) {
+        this.atk = atk;
+    }
+    public void setDef(int def) {
+        this.def = def;
+    }
+    public void setMaxHp(int maxHp) {
+        this.maxHp = maxHp;
+    }
+    public int[] getPos() {
+        return pos;
+    }
+    public int getMaxHp() {
+        return maxHp;
+    }
+    public double getRange() {
+        return range;
     }
     public int attacco(Personaggio nemico){
         int danno=atk*3-nemico.getDef()*2;

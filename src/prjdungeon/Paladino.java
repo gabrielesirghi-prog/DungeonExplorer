@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package prjdungeon;
-
-/**
- *
- * @author manuel.stenico
- */
 public class Paladino extends Personaggio {
     int enDivina;
     int enDivinaMax;
@@ -17,7 +8,6 @@ public class Paladino extends Personaggio {
         this.enDivina=enDivina;
         enDivinaMax=energiaDivina;
     }
-    
     public int attaccoDivino(Personaggio nemico){
         int danno=0;
         if(enDivina>0){
@@ -37,9 +27,6 @@ public class Paladino extends Personaggio {
             enDivina-=(enDivinaMax/2);
         }
         return cura;
-    }
-    
-    
-    
+    } 
 }
 

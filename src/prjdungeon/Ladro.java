@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package prjdungeon;
-
-/**
- *
- * @author manuel.stenico
- */
 public class Ladro extends Personaggio{
     //chance critica inizierà a 20% ma potrà essere aumentata con oggetti
     private int critChance;
@@ -42,10 +33,6 @@ public class Ladro extends Personaggio{
     public String toString() {
         return "Ladro{" + "critChance=" + critChance + '}';
     }
-    
-    
-    
-    
 }
 
 
